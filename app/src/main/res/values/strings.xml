@@ -1,0 +1,163 @@
+<resources>
+   <string name="app_name">CodeNameFive</string>
+   <string name="login_head" translatable="false">Login to your partner account</string>
+   <string name="todo">TODO</string>
+   <string name="enter_phone_number_or_email">Enter phone number or email</string>
+   <string name="btn_confirm">Continue</string>
+   <string name="not_a_partner">Not a partner yet?</string>
+   <string name="code_sent_to">We sent a code to</string>
+   <string name="enter_your_security_code">Enter your security code</string>
+   <string name="code_not_received">Code not received?</string>
+   <string name="login_partner">Login</string>
+   <string name="menu">Menu</string>
+   <string name="trips">Trips</string>
+   <string name="trips_history">Trips history</string>
+   <string name="earnings">Earnings</string>
+   <string name="promotions">Promotions</string>
+   <string name="upcoming_promotions">Upcoming promotions</string>
+   <string name="inbox">Inbox</string>
+   <string name="help">Help</string>
+   <string name="help_center">Help center</string>
+   <string name="settings_sting">Settings</string>
+   <string name="auto_accept">Auto accept</string>
+   <string name="maps_settings">Maps Settings</string>
+   <string name="logout">Logout</string>
+   <string name="head_profile">Profile</string>
+   <string name="vehicle_information">Vehicle information</string>
+   <string name="view_vehicle_details">View vehicle details</string>
+   <string name="payment_information">Payment information</string>
+   <string name="review_bank_details">Review bank details</string>
+   <string name="edit_profile">Edit profile</string>
+   <string name="p_h">Phone number</string>
+   <string name="e_m">Email</string>
+   <string name="next_to_kin">Next to kin</string>
+   <string name="pt_vehicle_info">Vehicle Information</string>
+   <string name="v_type">Vehicle type</string>
+   <string name="pt_reg_no">Registration number</string>
+   <string name="veh_supp_msg">To change your vehicle information, contact support</string>
+   <string name="bnk_info">Payment information</string>
+   <string name="acc_num">Account number</string>
+   <string name="srt_code_bnk">Sort code</string>
+   <string name="map_setings">Map settings</string>
+   <string name="open_in">Open in</string>
+   <string name="google_maps">Google maps</string>
+   <string name="str_waze">Waze</string>
+   <string name="ask_me_every_time">Ask me every time</string>
+   <string name="show_traffic">Show traffic</string>
+   <string name="str_toll_tax">Avoid routes with tolls</string>
+   <string name="str_motorway">Avoid routes with motorways</string>
+   <string name="pt_trips_history">Trips history</string>
+   <string name="curr_sign">$</string>
+   <string name="tt_earn">Total earnings</string>
+   <string name="tt_trips">Trips</string>
+   <string name="ordr_trip_fee">Trip fee</string>
+   <string name="order_surge_fee">Surge fee</string>
+   <string name="order_adjustment">Adjustment</string>
+   <string name="order_tip">Tip</string>
+   <string name="order_total">Total</string>
+   <string name="str_wallet_bal">Earnings</string>
+   <string name="str_statements">Statements</string>
+   <string name="current_balance">Current balance</string>
+   <string name="previous_payments">Previous payments</string>
+   <string name="total_amount_inc">Total amount</string>
+   <string name="service_rendered">Service rendered</string>
+   <string name="invoice_details_head">Invoice details</string>
+   <string name="view_invoice_pdf">View invoice PDF</string>
+   <string name="pt_inbox">Inbox</string>
+   <!-- Google Maps API Key !-->
+   <string name="GOOGLE_MAP_API_KEY">AIzaSyBMr4IQRIY5q4nfxP4I6LzpkyP08Ko1DU0</string>
+   <string name="finding_trips">You\'re offline</string>
+   <string name="time_connected">Time connected:</string>
+   <string name="finding_trip">Finding trips for you…</string>
+   <string name="find_rides">Finding trips for you…</string>
+   <string name="go_offline">Go offline</string>
+   <string name="go_online">Go online</string>
+   <string name="unable_to_go_online">Unable to go online</string>
+   <string name="contact_partner_support">Contact partner support</string>
+   <string name="accept_and_go">Accept and go</string>
+   <string name="new_trip_request">New trip request</string>
+   <string name="str_reject">Reject</string>
+   <string name="online">Online</string>
+   <string name="go_to_pickup">Go to pickup</string>
+   <string name="see_delivery_information">See delivery information</string>
+   <string name="def_min">0 Minutes</string>
+   <string name="def_dist">0 Miles</string>
+   <string name="trip_mins">\" minutes\"</string>
+   <string name="trip_km">\" km\"</string>
+   <string name="continue_reg">Continue</string>
+   <string name="register_as_partner">Register as partner</string>
+   <string name="apply_as_partner">Apply to become a partner</string>
+   <string name="aply_partner">Things we need to check</string>
+   <string name="personal_info">Enter your personal information</string>
+   <string name="upload_photo">Upload your profile photo</string>
+   <string name="change_profile_photo">Change profile photo</string>
+   <string name="reg_first_name">First name</string>
+   <string name="reg_last_name">Last name</string>
+   <string name="reg_email">Email address</string>
+   <string name="reg_password">Password</string>
+   <string name="reg_phone_number">Phone number</string>
+   <string name="vehicle_num">Vehicle registration number</string>
+   <string name="select_vehicle_type">Select your vehicle type</string>
+   <string name="submit_application">Submit application</string>
+   <string name="supporting_document_message">Provide your supporting document to complete your application</string>
+   <string name="id_proof">Proof of ID</string>
+
+   <!-- validation errors -->
+   <string name="error_first_name">Enter your first name</string>
+   <string name="error_last_name">Enter your last name</string>
+   <string name="error_email_address">Enter a valid email address</string>
+   <string name="error_password">Create a new password</string>
+   <string name="error_phone_num">Enter a valid phone number</string>
+   <string name="error_vehicle_type">Select your vehicle type</string>
+   <string name="error_vehicle_reg_num">Enter your vehicle registration number</string>
+   <string name="error_profile_pic">Please select a profile photo</string>
+   <string name="verify_identity">Enter your date of birth and address to verify your identity</string>
+   <string name="age_warning">You must be at least 18 years old to apply as partner</string>
+   <string name="address_line_1">Address line 1</string>
+   <string name="address_line_2">Address line 2</string>
+   <string name="date_of_birth">Date of birth</string>
+   <string name="zip_code">Zip code</string>
+   <string name="error_message">Error message</string>
+   <string name="error_password_weak">Password too weak, try including\ncapital letters and digits</string>
+   <!-- validation errors -->
+
+   <!-- validation errors -->
+   <string name="error_birth_date">Please select your date of birth</string>
+   <string name="error_country">Please select your country</string>
+   <string name="error_state">Please select your state</string>
+   <string name="error_city">Please select your city</string>
+   <string name="error_address">Please enter your address</string>
+   <string name="error_zip_code">Please enter your zip code</string>
+   <string name="supporting_documents">Supporting documents</string>
+   <string name="front_document">Upload front of the document</string>
+   <string name="back_document">Upload back of the document</string>
+   <string name="proof_of_address">Proof of address</string>
+   <string name="term_after">By proceeding, I agree to platform\'s</string>
+   <string name="user_agreement">By proceeding, I agree to platform\'s Terms of use\nand acknowledge that I have read the privacy policy</string>
+   <string name="address_proof">Upload proof of address</string>
+   <string name="agreement_error">You must accept the terms of use and privacy policy\nto SignUp as a delivery partner</string>
+   <string name="error_age_restriction">You must be 18 years old to become a partner</string>
+   <string name="upload_application">Submitting your application…</string>
+   <!-- validation errors -->
+
+   <string name="progress_20_percent">20%</string>
+   <string name="progress_40_percent">40%</string>
+   <string name="progress_60_percent">60%</string>
+   <string name="progress_80_percent">80%</string>
+   <string name="progress_100_percent">100%</string>
+   <string name="dialog_camera">Camera</string>
+   <string name="dialog_gallery">Gallery</string>
+   <string name="dialog_cancel">Cancel</string>
+   <string name="dialog_con_error">Internet connection error</string>
+   <string name="connection_warning">Make sure you have working internet connection.</string>
+   <string name="turn_on">Turn on</string>
+   
+   <!-- preferences keys -->
+   <string name="PREFERENCE_KEY_VEHICLE_NUM">com.itridtechnologies.codenamefive.vehicle.num</string>
+   <string name="error_email_empty">Enter your email address</string>
+   <string name="error_phone_empty">Enter your phone number</string>
+   <string name="error_duplicate_email">Email already exist</string>
+   <string name="error_duplicate_phone">Phone number already exist</string>
+   <!-- preferences keys -->
+
+</resources>
