@@ -6,7 +6,7 @@
     android:fontFamily="@font/helvetica_neue_regular"
     android:padding="12dp"
     android:singleLine="true"
-    android:textColor="@android:color/darker_gray"
+    android:textColor="@android:color/black"
     android:textSize="14sp">
 
 </CheckedTextView>

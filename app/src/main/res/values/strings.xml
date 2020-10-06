@@ -158,6 +158,7 @@
    <string name="error_phone_empty">Enter your phone number</string>
    <string name="error_duplicate_email">Email already exist</string>
    <string name="error_duplicate_phone">Phone number already exist</string>
+   <string name="msg_file_upload">Please select a file to upload</string>
    <!-- preferences keys -->
 
 </resources>

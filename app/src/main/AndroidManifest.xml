@@ -40,7 +40,8 @@
              android:resource="@xml/file_paths" />
       </provider>
 
-      <activity android:name=".UIViews.RegisterFirstStep"
+      <activity
+          android:name=".UIViews.RegisterFirstStep"
           android:screenOrientation="portrait">
          <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -48,8 +49,16 @@
             <category android:name="android.intent.category.LAUNCHER" />
          </intent-filter>
       </activity>
-      <activity android:name=".UIViews.RegisterSecondStep" />
-      <activity android:name=".UIViews.RegisterFinalStep" />
+      <activity
+          android:name=".UIViews.RegisterSecondStep"
+          android:screenOrientation="portrait">
+
+      </activity>
+      <activity
+          android:name=".UIViews.RegisterFinalStep"
+          android:screenOrientation="portrait">
+
+      </activity>
       <activity android:name=".UIViews.GoToPickupLocation" />
       <activity android:name=".UIViews.NewRestaurantTripRequest" /> <!-- Maps API key ! -->
       <!-- AIzaSyBMr4IQRIY5q4nfxP4I6LzpkyP08Ko1DU0 ! -->
