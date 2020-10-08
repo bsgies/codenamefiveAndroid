@@ -173,6 +173,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
             mChangePhotoRow.setVisibility(View.VISIBLE);
             //preview img
             mUserPhoto.setImageURI(FirstRegisterStep.getImageUri());
+
         }
         if (FirstRegisterStep.getVehicleNum() != null) {
             if (!FirstRegisterStep.getVehicleNum().equals("null"))
@@ -264,7 +265,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
     private void galleryAddPic() {
         Intent mediaScanIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         //mediaScanIntent.setType("image/*");
-        startActivityForResult(Intent.createChooser(mediaScanIntent, "Select File"), GALLERY_PIC_REQUEST);
+        startActivityForResult(Intent.createChooser(mediaScanIntent, "Tap to select a photo"), GALLERY_PIC_REQUEST);
     }
 
     private File createImageFile() throws IOException {
@@ -290,7 +291,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == PICK_IMAGE_REQUEST) {
-            if (resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK ) {
 
                 //hide upload pho row
                 mUploadPhotoRow.setVisibility(View.GONE);
@@ -302,6 +303,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
                 Toast.makeText(this, "Img saved at: " + mImageFilePath, Toast.LENGTH_SHORT).show();
 
             } else if (resultCode == RESULT_CANCELED) {
+                FirstRegisterStep.setImageUri(null);
                 Toast.makeText(this, "Operation cancelled !", Toast.LENGTH_SHORT).show();
             }
 
@@ -401,7 +403,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
                 break;
 
             default:
-                throw new IllegalStateException("Unexpected value: " + view.getId());
+                Toast.makeText(this, "Not allowed !", Toast.LENGTH_SHORT).show();
         }//switch
 
     }//end click
