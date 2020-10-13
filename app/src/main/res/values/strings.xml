@@ -151,14 +151,18 @@
    <string name="dialog_con_error">Internet connection error</string>
    <string name="connection_warning">Make sure you have working internet connection.</string>
    <string name="turn_on">Turn on</string>
-   
+
    <!-- preferences keys -->
-   <string name="PREFERENCE_KEY_VEHICLE_NUM">com.itridtechnologies.codenamefive.vehicle.num</string>
+   <string name="PREFERENCE_KEY">com.itridtechnologies.codenamefive</string>
    <string name="error_email_empty">Enter your email address</string>
    <string name="error_phone_empty">Enter your phone number</string>
    <string name="error_duplicate_email">Email already exist</string>
    <string name="error_duplicate_phone">Phone number already exist</string>
    <string name="msg_file_upload">Please select a file to upload</string>
+   <string name="tv_edit_email">Edit email</string>
+   <string name="hint_email">Email</string>
+   <string name="edit_phone">Edit phone number</string>
+   <string name="hint_phone_number">Phone number</string>
    <!-- preferences keys -->
 
 </resources>

@@ -5,6 +5,7 @@
       <item name="colorPrimary">@color/colorPrimary</item>
       <item name="colorPrimaryDark">#12D2B3</item>
       <item name="colorAccent">@color/colorAccent</item>
+
    </style>
 
    <style name="BlackPoppinsRegular">
@@ -71,6 +72,28 @@
       <item name="android:textSize">14sp</item>
       <item name="android:textColor">@android:color/darker_gray</item>
       <item name="fontFamily">@font/helvetica_neue_medium</item>
+   </style>
+
+   <style name="TIL_style">
+      <item name="android:textColor">@android:color/black</item>
+      <item name="errorTextColor">@color/redErrorColor</item>
+      <item name="hintTextColor">@android:color/darker_gray</item>
+      <item name="backgroundTint">@color/appThemeColor</item>
+      <item name="fontFamily">@font/helvetica_neue_medium</item>
+      <item name="android:textSize">16sp</item>
+
+   </style>
+
+   <style name="LightTextBlack_Large">
+      <item name="fontFamily">@font/helvetica_neue_regular</item>
+      <item name="android:textColor">@android:color/black</item>
+      <item name="android:textSize">16sp</item>
+   </style>
+
+   <style name="LightTextGrey_Small">
+      <item name="fontFamily">@font/helvetica_neue_regular</item>
+      <item name="android:textColor">@android:color/darker_gray</item>
+      <item name="android:textSize">14sp</item>
    </style>
 
 </resources>

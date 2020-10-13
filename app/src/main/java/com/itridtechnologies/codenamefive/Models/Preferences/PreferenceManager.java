@@ -15,23 +15,42 @@ public class PreferenceManager {
         this.context = context;
     }
 
-    public void saveVehicleNumber(String number) {
+    public void savePartnerEmail(String email) {
         SharedPreferences preferences = context.getSharedPreferences(
-                context.getResources().getString(R.string.PREFERENCE_KEY_VEHICLE_NUM),
+                context.getResources().getString(R.string.PREFERENCE_KEY),
                 Context.MODE_PRIVATE
         );
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("profile_img", number);
+        editor.putString("email", email);
         editor.apply();
-        Log.d(TAG, "SaveProfileImgUri: saved in preferences...");
+        Log.d(TAG, "savePartnerEmail: email saved in cache...");
     }//end fun
 
-    public String retrieveVehicleNumber() {
+    public String retrievePartnerEmail() {
         SharedPreferences preferences = context.getSharedPreferences(
-                context.getResources().getString(R.string.PREFERENCE_KEY_VEHICLE_NUM),
+                context.getResources().getString(R.string.PREFERENCE_KEY),
                 Context.MODE_PRIVATE
         );
-        return preferences.getString("vehicle_num", null);
+        return preferences.getString("email", "abc@example.com");
+    }//end fun
+
+    public void savePartnerPhone(String phone) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("phone", phone);
+        editor.apply();
+        Log.d(TAG, "savePartnerPhone: email saved in cache...");
+    }//end fun
+
+    public String retrievePartnerPhone() {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        return preferences.getString("phone", "+00 123456789");
     }//end fun
 
 }

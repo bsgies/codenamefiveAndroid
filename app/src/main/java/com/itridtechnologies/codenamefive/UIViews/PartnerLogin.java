@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.animation.Animation;
@@ -18,12 +19,16 @@ import java.util.regex.Pattern;
 
 public class PartnerLogin extends AppCompatActivity {
 
-    //pattern password
+    //const
+    private static final String TAG = "PartnerLogin";
+
+    //pattern phone
     private static final Pattern phoneNumPattern = Pattern.compile("^\\s*(?:\\+" +
             "?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$");
 
     private TextInputLayout partnerPhoneEmail;
     private Button continuePartnerLogin;
+    private Button notPartnerYet;
     private CardView loginCard;
     private Animation animation;
     private Boolean inputOk;
@@ -38,7 +43,9 @@ public class PartnerLogin extends AppCompatActivity {
         //find views
         partnerPhoneEmail = findViewById(R.id.partner_email_or_phone);
         continuePartnerLogin = findViewById(R.id.btn_continue_partner_login);
+        notPartnerYet = findViewById(R.id.btn_goto_registration);
         loginCard = findViewById(R.id.partner_login_cardView);
+
         //loadAnimation
         animation = AnimationUtils.loadAnimation(this, R.anim.right_to_left_slide);
         loginCard.setAnimation(animation);
@@ -68,10 +75,10 @@ public class PartnerLogin extends AppCompatActivity {
         //getInput
         try {
             PARTNER_EMAIL_PHONE = partnerPhoneEmail.getEditText().getText().toString().trim();
-        } catch (Exception ex) {
-            System.out.println("Input Error");
+        } catch (NullPointerException ex) {
+            Log.d(TAG, "validateInput: " + ex.getMessage());
         }
-        
+
         this.inputOk = false;
         if (PARTNER_EMAIL_PHONE.isEmpty()) {
             this.partnerPhoneEmail.setError("Field can't be empty");

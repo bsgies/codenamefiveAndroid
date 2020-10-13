@@ -2,6 +2,9 @@
 
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <translate
-        android:duration="@android:integer/config_mediumAnimTime"
+
+        android:duration="500"
         android:toYDelta="100%p" />
 </set>
+
+    <!-- android:duration="@android:integer/config_mediumAnimTime" -->

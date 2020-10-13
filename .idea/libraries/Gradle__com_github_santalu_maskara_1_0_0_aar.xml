@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.santalu:maskara:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3ca704c5cb95279deb1cd2963a2418a/jetified-maskara-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3ca704c5cb95279deb1cd2963a2418a/jetified-maskara-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3ca704c5cb95279deb1cd2963a2418a/jetified-maskara-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ccc36dbebb26645fcd2ee00ad543d92/jetified-maskara-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ccc36dbebb26645fcd2ee00ad543d92/jetified-maskara-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ccc36dbebb26645fcd2ee00ad543d92/jetified-maskara-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
