@@ -77,7 +77,6 @@
    <style name="TIL_style">
       <item name="android:textColor">@android:color/black</item>
       <item name="errorTextColor">@color/redErrorColor</item>
-      <item name="hintTextColor">@android:color/darker_gray</item>
       <item name="backgroundTint">@color/appThemeColor</item>
       <item name="fontFamily">@font/helvetica_neue_medium</item>
       <item name="android:textSize">16sp</item>

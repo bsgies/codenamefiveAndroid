@@ -70,7 +70,7 @@
          <RelativeLayout
              android:id="@+id/rel_lay_phone"
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
+             android:layout_height="70dp"
              android:padding="6dp"
              android:transitionName="transition_row_phone">
 
@@ -90,8 +90,8 @@
                 android:layout_below="@+id/tv_phone"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
-                android:text="+44 9838347395" />
+                android:layout_marginTop="10dp"
+                tools:text="+44 9838347395" />
 
          </RelativeLayout>
 
@@ -106,7 +106,7 @@
 
          <RelativeLayout
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
+             android:layout_height="70dp"
              android:padding="6dp">
 
             <TextView
@@ -126,8 +126,8 @@
                 android:layout_below="@+id/tv_email"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
-                android:text="rabitBunny@gmail.com" />
+                android:layout_marginTop="10dp"
+                tools:text="rabitBunny@gmail.com" />
 
          </RelativeLayout>
 
@@ -142,50 +142,74 @@
              style="@style/TextSmallBlack"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_marginStart="10dp"
+             android:layout_marginStart="14dp"
              android:layout_marginBottom="6dp"
              android:text="@string/next_to_kin" />
 
       </TableRow>
 
       <TableRow
+          android:id="@+id/row_next_to_kin_name"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@drawable/border_top_dark"
-          android:padding="12dp">
+          android:background="@drawable/border_top_dark">
 
          <RelativeLayout
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:padding="4dp">
+             android:layout_height="70dp"
+             android:padding="6dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/LightTextGrey_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/emergency_name" />
 
             <TextView
                 style="@style/LightTextBlack_Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Emergency contact name" />
+                android:layout_below="@id/tv_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                tools:text="John Doe" />
 
          </RelativeLayout>
       </TableRow>
 
       <TableRow
+          android:id="@+id/row_next_to_kin_contact"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@drawable/border_top_dark"
-          android:padding="12dp">
+          android:background="@drawable/border_top_dark">
 
          <RelativeLayout
              android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:padding="4dp">
+             android:layout_height="70dp"
+             android:padding="6dp">
+
+            <TextView
+                android:id="@+id/tv_e_phone"
+                style="@style/LightTextGrey_Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/emergency_phone" />
 
             <TextView
                 style="@style/LightTextBlack_Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="Emergency contact phone number" />
+                android:layout_below="@+id/tv_e_phone"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                tools:text="+44 03434 3043" />
 
          </RelativeLayout>
       </TableRow>

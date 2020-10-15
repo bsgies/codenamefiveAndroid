@@ -17,6 +17,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.itridtechnologies.codenamefive.Models.Preferences.PreferenceManager;
 import com.itridtechnologies.codenamefive.R;
 import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditEmail;
+import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditNextToKin;
 import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditPhone;
 
 public class PartnerEditProfile extends AppCompatActivity implements View.OnClickListener {
@@ -27,7 +28,6 @@ public class PartnerEditProfile extends AppCompatActivity implements View.OnClic
     //ui views
     private TextView partnerEmail;
     private TextView partnerPhone;
-    private RelativeLayout mRelativeLayoutPhone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +37,18 @@ public class PartnerEditProfile extends AppCompatActivity implements View.OnClic
         //find views
         TableRow tableRowEmail = findViewById(R.id.row_edit_email);
         TableRow tableRowPhone = findViewById(R.id.row_partner_phone);
+        TableRow tableRowKinName = findViewById(R.id.row_next_to_kin_name);
+        TableRow tableRowKinPhone = findViewById(R.id.row_next_to_kin_contact);
         partnerEmail = findViewById(R.id.tv_partner_email);
         partnerPhone = findViewById(R.id.tv_partner_phone);
-        mRelativeLayoutPhone = findViewById(R.id.rel_lay_phone);
+        RelativeLayout relativeLayoutPhone = findViewById(R.id.rel_lay_phone);
 
         //listeners
         tableRowEmail.setOnClickListener(this);
         tableRowPhone.setOnClickListener(this);
-        mRelativeLayoutPhone.setOnClickListener(this);
+        tableRowKinName.setOnClickListener(this);
+        tableRowKinPhone.setOnClickListener(this);
+        relativeLayoutPhone.setOnClickListener(this);
 
     }//onCreate
 
@@ -75,9 +79,23 @@ public class PartnerEditProfile extends AppCompatActivity implements View.OnClic
             case R.id.rel_lay_phone:
                 navToEditPhoneScreen();
                 break;
+
+            case R.id.row_next_to_kin_name:
+            case R.id.row_next_to_kin_contact:
+                navToEditKinScreen();
         }
 
     }//onClick
+
+    private void navToEditKinScreen() {
+        Intent intent = new Intent(this, EditNextToKin.class);
+        startActivity(intent);
+
+        //anim
+        overridePendingTransition(R.anim.slide_up_anim, R.anim.fade_out);
+        Log.d(TAG, "navToEditPhoneScreen: " + partnerPhone.getText().toString());
+
+    }
 
     private void navToEditPhoneScreen() {
         Intent intent = new Intent(this, EditPhone.class);

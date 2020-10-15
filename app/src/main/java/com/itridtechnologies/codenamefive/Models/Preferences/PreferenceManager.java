@@ -9,7 +9,7 @@ import com.itridtechnologies.codenamefive.R;
 public class PreferenceManager {
     private static final String TAG = "PreferenceManager";
 
-    private Context context;
+    private final Context context;
 
     public PreferenceManager(Context context) {
         this.context = context;
@@ -51,6 +51,44 @@ public class PreferenceManager {
                 Context.MODE_PRIVATE
         );
         return preferences.getString("phone", "+00 123456789");
+    }//end fun
+
+    public void saveNextToKinName(String name) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("kin_name", name);
+        editor.apply();
+        Log.d(TAG, "saveNextToKinName: saved..");
+    }//end fun
+
+    public String retrieveNextToKinName() {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        return preferences.getString("kin_name", "");
+    }//end fun
+
+    public void saveNextToKinPhone(String phone) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("kin_phone", phone);
+        editor.apply();
+        Log.d(TAG, "saveNextToKinPhone: saved..");
+    }//end fun
+
+    public String retrieveNextToKinPhone() {
+        SharedPreferences preferences = context.getSharedPreferences(
+                context.getResources().getString(R.string.PREFERENCE_KEY),
+                Context.MODE_PRIVATE
+        );
+        return preferences.getString("kin_phone", "");
     }//end fun
 
 }

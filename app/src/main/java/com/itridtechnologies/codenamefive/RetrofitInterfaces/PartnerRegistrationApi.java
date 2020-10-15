@@ -72,11 +72,27 @@ public interface PartnerRegistrationApi {
     //____________________________
 
     //update email
+    @Headers({
+            "Content-Type: application/json",
+            "Accept: application/json"
+    })
     @PATCH("partner/email")
     Call<UpdateInfoResponse> updatePartnerEmail(@Header("x-access-token") String accessToken, @Body JsonObject object);
 
     //update phone
+    @Headers({
+            "Content-Type: application/json",
+            "Accept: application/json"
+    })
     @PATCH("partner/phone")
     Call<UpdateInfoResponse> updatePartnerPhone(@Header("x-access-token") String accessToken, @Body JsonObject object);
+
+    //partner next to kin
+    @Headers({
+            "Content-Type: application/json",
+            "Accept: application/json"
+    })
+    @PATCH("partner/next-of-kin")
+    Call<UpdateInfoResponse> updateNextToKin(@Header("x-access-token") String accessToken, @Body JsonObject object);
 
 }//end interface
