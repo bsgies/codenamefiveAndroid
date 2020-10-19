@@ -1,6 +1,8 @@
 package com.itridtechnologies.codenamefive.RetrofitInterfaces;
 
 import com.google.gson.JsonObject;
+import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayResponse;
+import com.itridtechnologies.codenamefive.Models.PartnerVehicleModel.PartnerVehicleResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.CityResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.CountryResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.DocumentModels.PojoImageResponse;
@@ -95,4 +97,11 @@ public interface PartnerRegistrationApi {
     @PATCH("partner/next-of-kin")
     Call<UpdateInfoResponse> updateNextToKin(@Header("x-access-token") String accessToken, @Body JsonObject object);
 
+    @GET("partner/vehicle")
+    Call<PartnerVehicleResponse> getVehicleInformation(@Header("x-access-token") String accessToken);
+
+    //payment information.............................................
+    @GET("gateway")
+    Call<GatewayResponse> getPaymentGateways();
+    //payment information.............................................
 }//end interface

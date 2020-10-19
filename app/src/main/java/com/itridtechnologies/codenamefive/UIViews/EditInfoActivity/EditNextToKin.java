@@ -171,6 +171,7 @@ public class EditNextToKin extends AppCompatActivity implements UniversalDialog.
                         //save to cache..
                         mManager.saveNextToKinName(emergencyName);
                         mManager.saveNextToKinPhone(emergencyPhone);
+                        //TODO: get values from preference in EditProfile screen
 
                         Toast.makeText(EditNextToKin.this, "Net of kin updated successfully!", Toast.LENGTH_SHORT).show();
                     }

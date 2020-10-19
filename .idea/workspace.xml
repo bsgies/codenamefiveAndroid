@@ -17,29 +17,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f011e3a-ca97-4a4a-a6c0-a711a3cd33c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/EditInfoActivity/EditNextToKin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_next_to_kin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/GatewayResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/Gateways.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerVehicleModel/PartnerVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerVehicleModel/PartnerVehicleResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/Preferences/PreferenceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/Preferences/PreferenceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/RetrofitInterfaces/PartnerRegistrationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/RetrofitInterfaces/PartnerRegistrationApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerEditProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerEditProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_edit_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_edit_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/EditInfoActivity/EditNextToKin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/EditInfoActivity/EditNextToKin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerBankInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerBankInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerVehicleInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerVehicleInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_bank_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_bank_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_vehicle_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_vehicle_info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_first_step.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_first_step.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +81,8 @@
       <list>
         <option value="Interface" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,12 +95,12 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Asad07 &lt;muhammadasadnaeem.developer@outlook.com&gt;" />
         <option value="asad &lt;emma.rudd.76@gmail.com&gt;" />
         <option value="Muhammad Asad Naeem &lt;emma.rudd.76@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="41cb8739-c668-439d-b0af-c0e97ae9c97a" />
@@ -478,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602594223183</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="# PartnerEditProfile complete">
+      <created>1602778961815</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1602778961815</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,7 +519,8 @@
     <MESSAGE value="#UI fixes" />
     <MESSAGE value="# image glitch fixed !" />
     <MESSAGE value="# PartnerEditProfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="# PartnerEditProfile" />
+    <MESSAGE value="# PartnerEditProfile complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="# PartnerEditProfile complete" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -539,10 +540,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="172" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1602448998693" />
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1602448200064">
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1603136398922">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602448200064" />
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603136398922" />
     <state x="449" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602587571950">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -563,10 +564,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="93" y="93" width="1350" height="648" key="AVDManager/0.0.1536.834@0.0.1536.834" timestamp="1602595259075" />
-    <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog" timestamp="1596569188903">
+    <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog" timestamp="1603134061901">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1596569188903" />
+    <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1603134061901" />
     <state x="349" y="172" key="AndroidCreateResourceFileDialog" timestamp="1602580065823">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -575,30 +576,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="627" y="230" key="AndroidCreateXmlResourceDialog/0.0.1536.834@0.0.1536.834" timestamp="1602680670513" />
-    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2" timestamp="1602594220327">
+    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2" timestamp="1602778960604">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602594220327" />
+    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602778960604" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1601894414225">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1601894414225" />
-    <state width="1491" height="418" key="GridCell.Tab.0.bottom" timestamp="1602777853144">
+    <state width="1491" height="418" key="GridCell.Tab.0.bottom" timestamp="1603137101570">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602777853144" />
-    <state width="1491" height="418" key="GridCell.Tab.0.center" timestamp="1602777853144">
+    <state width="1491" height="418" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
+    <state width="1491" height="418" key="GridCell.Tab.0.center" timestamp="1603137101570">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1602777853144" />
-    <state width="1491" height="418" key="GridCell.Tab.0.left" timestamp="1602777853144">
+    <state width="1491" height="418" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
+    <state width="1491" height="418" key="GridCell.Tab.0.left" timestamp="1603137101569">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1602777853144" />
-    <state width="1491" height="418" key="GridCell.Tab.0.right" timestamp="1602777853144">
+    <state width="1491" height="418" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603137101569" />
+    <state width="1491" height="418" key="GridCell.Tab.0.right" timestamp="1603137101570">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1602777853144" />
+    <state width="1491" height="418" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
     <state width="1491" height="264" key="GridCell.Tab.1.bottom" timestamp="1600096428492">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -631,10 +632,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="265" y="56" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1602594283372" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602594242610">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602778969166">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602594242610" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602778969166" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1597237272598">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -659,9 +660,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1596723804219" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1602773967460">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1603134069727">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1602773967460" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1603134069727" />
   </component>
 </project>

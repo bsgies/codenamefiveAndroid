@@ -169,5 +169,6 @@
    <string name="emergency_name">Emergency contact name</string>
    <string name="emergency_phone">Emergency contact phone number</string>
    <!-- preferences keys -->
+   <string name="sp_payout_prompt">Available methods</string>
 
 </resources>

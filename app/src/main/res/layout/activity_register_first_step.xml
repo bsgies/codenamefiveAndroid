@@ -110,7 +110,7 @@
           android:layout_centerInParent="true"
           android:elevation="2dp"
           android:indeterminate="true"
-          android:indeterminateTint="@color/redErrorColor"
+          android:indeterminateTint="@color/appThemeColor"
           android:visibility="gone"
           tools:visibility="visible" />
 
