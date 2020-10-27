@@ -9,11 +9,18 @@ public class Gateways {
     @SerializedName("name")
     private String gatewayName;
 
+    @SerializedName("partner_type")
+    private String type;
+
     public int getGatewayId() {
         return gatewayId;
     }
 
     public String getGatewayName() {
         return gatewayName;
+    }
+
+    public String getType() {
+        return type;
     }
 }

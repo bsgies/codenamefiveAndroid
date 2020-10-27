@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TableRow;
 
 import com.itridtechnologies.codenamefive.R;
+import com.itridtechnologies.codenamefive.UIViews.BankInfoActivity.PartnerBankInfo;
 
 public class PartnerProfile extends AppCompatActivity implements View.OnClickListener {
 

@@ -17,21 +17,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f011e3a-ca97-4a4a-a6c0-a711a3cd33c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/GatewayResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/Gateways.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerVehicleModel/PartnerVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerVehicleModel/PartnerVehicleResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/GatewayData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/GatewayDataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/BankInfoActivity/PartnerBankInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/BankInfoActivity/PostBankInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_bank_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/Gateways.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/Models/PartnerPayment/Gateways.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/RetrofitInterfaces/PartnerRegistrationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/RetrofitInterfaces/PartnerRegistrationApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/EditInfoActivity/EditNextToKin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/EditInfoActivity/EditNextToKin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerBankInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerBankInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerVehicleInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerVehicleInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerBankInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/itridtechnologies/codenamefive/UIViews/PartnerProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_bank_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_bank_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_vehicle_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_partner_vehicle_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_first_step.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register_first_step.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +93,8 @@
       <list>
         <option value="Interface" />
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -122,9 +134,11 @@
     <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/muham/AppData/Local/Android/Sdk/sources/android-30/android/widget/AdapterView.java_SELECTED" value="AdapterView" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="multi-representation-previewC:/Users/muham/AppData/Local/Android/Sdk/sources/android-30/android/widget/AdapterView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="emulator" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -132,17 +146,17 @@
     <key name="android.template.1324734631">
       <recent name="com.itridtechnologies.codenamefive.UIViews" />
     </key>
-    <key name="android.template.-411494427">
-      <recent name="com.itridtechnologies.codenamefive.UIViews" />
-    </key>
-    <key name="android.template.95928969">
-      <recent name="com.itridtechnologies.codenamefive.UIViews.EditInfoActivity" />
-    </key>
     <key name="android.template.905939952">
       <recent name="com.itridtechnologies.codenamefive.UIViews.EditInfoActivity" />
     </key>
     <key name="android.template.-498877933">
       <recent name="com.itridtechnologies.codenamefive.UIViews.EditInfoActivity" />
+    </key>
+    <key name="android.template.1189316169">
+      <recent name="com.itridtechnologies.codenamefive.UIViews.BankInfoActivity" />
+    </key>
+    <key name="android.template.-1418263036">
+      <recent name="com.itridtechnologies.codenamefive.UIViews" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\muham\Desktop\AndroidResources\codenamefiveAndroid\app\src\main\res\drawable-v24" />
@@ -153,7 +167,10 @@
     <key name="android.template.-147154293">
       <recent name="com.itridtechnologies.codenamefive.UIViews" />
     </key>
-    <key name="android.template.-1418263036">
+    <key name="android.template.95928969">
+      <recent name="com.itridtechnologies.codenamefive.UIViews.EditInfoActivity" />
+    </key>
+    <key name="android.template.-411494427">
       <recent name="com.itridtechnologies.codenamefive.UIViews" />
     </key>
   </component>
@@ -478,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602778961815</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="# get payment Gateways">
+      <created>1603137371444</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1603137371444</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,7 +544,8 @@
     <MESSAGE value="# image glitch fixed !" />
     <MESSAGE value="# PartnerEditProfile" />
     <MESSAGE value="# PartnerEditProfile complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="# PartnerEditProfile complete" />
+    <MESSAGE value="# get payment Gateways" />
+    <option name="LAST_COMMIT_MESSAGE" value="# get payment Gateways" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -540,10 +565,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="172" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1602448998693" />
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1603136398922">
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1603536963201">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603136398922" />
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603536963201" />
     <state x="449" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602587571950">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -560,46 +585,46 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1597237159342" />
-    <state x="93" y="93" width="1350" height="648" key="AVDManager" timestamp="1602595259075">
+    <state x="96" y="94" width="1350" height="648" key="AVDManager" timestamp="1603455533012">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="AVDManager/0.0.1536.834@0.0.1536.834" timestamp="1602595259075" />
+    <state x="96" y="94" width="1350" height="648" key="AVDManager/0.0.1536.834@0.0.1536.834" timestamp="1603455533012" />
     <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog" timestamp="1603134061901">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="349" y="172" key="AndroidCreateResourceDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1603134061901" />
-    <state x="349" y="172" key="AndroidCreateResourceFileDialog" timestamp="1602580065823">
+    <state x="349" y="172" key="AndroidCreateResourceFileDialog" timestamp="1603459578268">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1602580065823" />
-    <state x="627" y="230" key="AndroidCreateXmlResourceDialog" timestamp="1602680670513">
+    <state x="349" y="172" key="AndroidCreateResourceFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1603459578268" />
+    <state x="627" y="230" key="AndroidCreateXmlResourceDialog" timestamp="1603534210370">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="627" y="230" key="AndroidCreateXmlResourceDialog/0.0.1536.834@0.0.1536.834" timestamp="1602680670513" />
-    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2" timestamp="1602778960604">
+    <state x="627" y="230" key="AndroidCreateXmlResourceDialog/0.0.1536.834@0.0.1536.834" timestamp="1603534210370" />
+    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2" timestamp="1603137370448">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602778960604" />
+    <state x="267" y="9" width="1144" height="812" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1603137370448" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1601894414225">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1601894414225" />
-    <state width="1491" height="418" key="GridCell.Tab.0.bottom" timestamp="1603137101570">
+    <state width="1340" height="470" key="GridCell.Tab.0.bottom" timestamp="1603660484830">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
-    <state width="1491" height="418" key="GridCell.Tab.0.center" timestamp="1603137101570">
+    <state width="1340" height="470" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1603660484830" />
+    <state width="1340" height="470" key="GridCell.Tab.0.center" timestamp="1603660484830">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
-    <state width="1491" height="418" key="GridCell.Tab.0.left" timestamp="1603137101569">
+    <state width="1340" height="470" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1603660484830" />
+    <state width="1340" height="470" key="GridCell.Tab.0.left" timestamp="1603660484830">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603137101569" />
-    <state width="1491" height="418" key="GridCell.Tab.0.right" timestamp="1603137101570">
+    <state width="1340" height="470" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1603660484830" />
+    <state width="1340" height="470" key="GridCell.Tab.0.right" timestamp="1603660484830">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1491" height="418" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603137101570" />
+    <state width="1340" height="470" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1603660484830" />
     <state width="1491" height="264" key="GridCell.Tab.1.bottom" timestamp="1600096428492">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -632,10 +657,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="265" y="56" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1602594283372" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602778969166">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1603137381768">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602778969166" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1603137381768" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1597237272598">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -660,9 +685,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1596723804219" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1603134069727">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1603467373590">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1603134069727" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1603467373590" />
   </component>
 </project>

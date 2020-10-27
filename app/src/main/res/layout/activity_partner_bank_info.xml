@@ -5,7 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundLightGrey"
-    tools:context=".UIViews.PartnerBankInfo">
+    tools:context=".UIViews.BankInfoActivity.PartnerBankInfo">
+
+   <TextView
+       android:id="@+id/tv_no_payout_method"
+       style="@style/LightTextGrey_Small"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:elevation="2dp"
+       android:text="@string/tv_payout_unavailable"
+       android:textStyle="bold"
+       android:visibility="gone"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+       tools:visibility="visible"/>
 
    <!-- top app bar !-->
    <RelativeLayout
@@ -34,39 +49,233 @@
           android:layout_centerInParent="true"
           android:text="@string/bnk_info" />
 
+      <ProgressBar
+          android:id="@+id/progressBar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:elevation="2dp"
+          android:indeterminate="true"
+          android:indeterminateTint="@color/appThemeColor"
+          android:visibility="gone"
+          tools:visibility="visible" />
+
    </RelativeLayout>
    <!-- top app bar !-->
 
-   <TableLayout
+   <ScrollView
+       android:id="@+id/scroll_view"
        android:layout_width="0dp"
        android:layout_height="0dp"
-       android:stretchColumns="0"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+       app:layout_constraintTop_toBottomOf="@id/relativeLayout">
 
-      <!-- row drop down -->
-      <TableRow
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/c_lay_child"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="24dp"
-          android:background="@drawable/four_ex_border">
+          android:layout_height="wrap_content">
 
          <Spinner
              android:id="@+id/spinner_payouts"
              style="@style/LightTextGrey_Small"
-             android:layout_width="wrap_content"
-             android:layout_height="60dp"
-             android:layout_marginStart="14dp"
-             android:layout_marginEnd="14dp"
+             android:layout_width="match_parent"
+             android:layout_height="55dp"
+             android:layout_marginTop="24dp"
+             android:background="@drawable/four_ex_border"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
              android:spinnerMode="dialog"
              android:textAlignment="textStart"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@id/c_lay_child"
              tools:listitem="spinner" />
 
-      </TableRow>
-      <!-- row drop down -->
+         <!-- edit text 1 -->
 
-   </TableLayout>
+         <TextView
+             android:id="@+id/tv_label1"
+             style="@style/LightTextBlack_Large"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_marginTop="24dp"
+             android:visibility="gone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/spinner_payouts"
+             tools:text="Label"
+             tools:visibility="visible" />
+
+         <TextView
+             android:id="@+id/edt_placeholder1"
+             style="@style/TextEsmallGrey"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_marginTop="12dp"
+             android:background="@drawable/four_ex_border"
+             android:ellipsize="end"
+             android:gravity="center_vertical"
+             android:maxLines="1"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
+             android:visibility="gone"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_label1"
+             tools:hint="Placeholder"
+             tools:visibility="visible" />
+
+         <!-- edit text1  -->
+
+         <!-- edit text 2 -->
+
+         <TextView
+             android:id="@+id/tv_label2"
+             style="@style/LightTextBlack_Large"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_marginTop="12dp"
+             android:visibility="gone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/edt_placeholder1"
+             tools:text="Label"
+             tools:visibility="visible" />
+
+         <TextView
+             android:id="@+id/edt_placeholder2"
+             style="@style/TextEsmallGrey"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_marginTop="12dp"
+             android:background="@drawable/four_ex_border"
+             android:ellipsize="end"
+             android:gravity="center_vertical"
+             android:maxLines="1"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
+             android:visibility="gone"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_label2"
+             tools:hint="Placeholder"
+             tools:visibility="visible" />
+
+         <!-- edit text2  -->
+
+         <!-- edit text 3 -->
+
+         <TextView
+             android:id="@+id/tv_label3"
+             style="@style/LightTextBlack_Large"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_marginTop="12dp"
+             android:visibility="gone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/edt_placeholder2"
+             tools:text="Label"
+             tools:visibility="visible" />
+
+         <TextView
+             android:id="@+id/edt_placeholder3"
+             style="@style/TextEsmallGrey"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_marginTop="12dp"
+             android:background="@drawable/four_ex_border"
+             android:ellipsize="end"
+             android:gravity="center_vertical"
+             android:maxLines="1"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
+             android:visibility="gone"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_label3"
+             tools:hint="Placeholder"
+             tools:visibility="visible" />
+
+         <!-- edit text 3  -->
+
+         <!-- edit text 3 -->
+
+         <TextView
+             android:id="@+id/tv_label4"
+             style="@style/LightTextBlack_Large"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_marginTop="12dp"
+             android:visibility="gone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/edt_placeholder3"
+             tools:text="Label"
+             tools:visibility="visible" />
+
+         <TextView
+             android:id="@+id/edt_placeholder4"
+             style="@style/TextEsmallGrey"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_marginTop="12dp"
+             android:background="@drawable/four_ex_border"
+             android:ellipsize="end"
+             android:gravity="center_vertical"
+             android:maxLines="1"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
+             android:visibility="gone"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_label4"
+             tools:hint="Placeholder"
+             tools:visibility="visible" />
+
+         <!-- edit text 4  -->
+
+         <!-- edit text 3 -->
+
+         <TextView
+             android:id="@+id/tv_label5"
+             style="@style/LightTextBlack_Large"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="14dp"
+             android:layout_marginTop="12dp"
+             android:visibility="gone"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/edt_placeholder4"
+             tools:text="Label"
+             tools:visibility="visible" />
+
+         <TextView
+             android:id="@+id/edt_placeholder5"
+             style="@style/TextEsmallGrey"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_marginTop="12dp"
+             android:background="@drawable/four_ex_border"
+             android:ellipsize="end"
+             android:gravity="center_vertical"
+             android:maxLines="1"
+             android:paddingStart="16dp"
+             android:paddingEnd="16dp"
+             android:visibility="gone"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tv_label5"
+             tools:hint="Placeholder"
+             tools:visibility="visible" />
+
+         <!-- edit text 5  -->
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

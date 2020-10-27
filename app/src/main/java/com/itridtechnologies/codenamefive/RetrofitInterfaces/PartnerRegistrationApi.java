@@ -1,6 +1,7 @@
 package com.itridtechnologies.codenamefive.RetrofitInterfaces;
 
 import com.google.gson.JsonObject;
+import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayDataResponse;
 import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayResponse;
 import com.itridtechnologies.codenamefive.Models.PartnerVehicleModel.PartnerVehicleResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.CityResponse;
@@ -103,5 +104,16 @@ public interface PartnerRegistrationApi {
     //payment information.............................................
     @GET("gateway")
     Call<GatewayResponse> getPaymentGateways();
+
+    @GET("gateway/{id}")
+    Call<GatewayDataResponse> getGatewayData(@Path("id") int gatewayId);
+
+    @Headers({
+            "Content-Type: application/json",
+            "Accept: application/json"
+    })
+    @POST("partner/exist")
+    Call<UpdateInfoResponse> payouts(@Body JsonObject object);
+
     //payment information.............................................
 }//end interface
