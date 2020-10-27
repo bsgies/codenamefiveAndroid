@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLightGrey"
+    tools:context=".UIViews.EditInfoActivity.EditEmail">
+
+   <!-- top app bar !-->
+   <RelativeLayout
+       android:id="@+id/relativeLayout"
+       android:layout_width="0dp"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@drawable/border_bottom_dark"
+       android:padding="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <ProgressBar
+          android:id="@+id/pBar_loading"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:indeterminate="true"
+          android:indeterminateTint="@color/appThemeColor"
+          android:visibility="gone"
+          tools:visibility="visible" />
+
+      <ImageView
+          android:id="@+id/img_close"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_alignParentStart="true"
+          android:layout_centerVertical="true"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/close" />
+
+      <ImageView
+          android:id="@+id/img_done"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/icon_done" />
+
+      <TextView
+          style="@style/TextSmallBlack"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="@string/tv_edit_email"
+          tools:ignore="RelativeOverlap" />
+
+   </RelativeLayout>
+   <!-- top app bar !-->
+
+   <RelativeLayout
+       android:id="@+id/rel_lay1"
+       android:layout_width="0dp"
+       android:layout_height="100dp"
+       android:layout_marginTop="24dp"
+       android:background="@drawable/four_ex_border"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/relativeLayout">
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/partner_email"
+          style="@style/TIL_style"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="12dp"
+          android:layout_marginEnd="12dp"
+          android:hapticFeedbackEnabled="true"
+          android:hint="@string/hint_email"
+          app:errorEnabled="true"
+          app:errorIconDrawable="@drawable/icon_error_til">
+
+         <com.google.android.material.textfield.TextInputEditText
+             style="@style/TextEsmallBlack"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="text" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+   </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
