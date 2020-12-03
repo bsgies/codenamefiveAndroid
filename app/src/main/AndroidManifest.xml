@@ -21,6 +21,7 @@
        android:required="false" />
 
    <application
+       android:name=".utils.CNF"
        android:allowBackup="true"
        android:icon="@mipmap/ic_launcher"
        android:label="@string/app_name"
@@ -48,11 +49,7 @@
       <activity
           android:name=".UIViews.RegisterFirstStep"
           android:screenOrientation="portrait">
-         <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-         </intent-filter>
       </activity>
       <activity
           android:name=".UIViews.RegisterSecondStep"
@@ -86,7 +83,13 @@
       <activity android:name=".UIViews.PartnerProfile" />
       <activity android:name=".UIViews.PartnerAppMenu" />
       <activity android:name=".UIViews.PartnerLoginSecurityCode" />
-      <activity android:name=".UIViews.PartnerLogin"/>
+      <activity android:name=".UIViews.PartnerLogin">
+         <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+         </intent-filter>
+      </activity>
       <activity android:name=".UIViews.MainActivity" />
    </application>
 

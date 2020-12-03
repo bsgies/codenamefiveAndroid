@@ -123,12 +123,13 @@
        android:layout_width="0dp"
        android:layout_height="0dp"
        android:scrollbars="vertical"
-       app:layout_constraintBottom_toTopOf="@+id/relativeLayout5"
+       app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
 
       <TableLayout
+          android:id="@+id/layoutTable"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
@@ -414,6 +415,7 @@
          <!-- row Error Message -->
 
       </TableLayout>
+
    </ScrollView>
    <!-- main body scroll view -->
 

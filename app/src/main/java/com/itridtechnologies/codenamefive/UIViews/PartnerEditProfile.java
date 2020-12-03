@@ -19,6 +19,7 @@ import com.itridtechnologies.codenamefive.R;
 import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditEmail;
 import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditNextToKin;
 import com.itridtechnologies.codenamefive.UIViews.EditInfoActivity.EditPhone;
+import com.itridtechnologies.codenamefive.utils.DataHelper;
 
 public class PartnerEditProfile extends AppCompatActivity implements View.OnClickListener {
 
@@ -56,15 +57,17 @@ public class PartnerEditProfile extends AppCompatActivity implements View.OnClic
     protected void onResume() {
         super.onResume();
 
-        //set email & get from cache
-        partnerEmail.setText(
-                new PreferenceManager(this).retrievePartnerEmail()
-        );
+        if (DataHelper.USER_DATA_TRANSPORTER != null) {
+            //set email & get from cache
+            partnerEmail.setText(
+                    DataHelper.USER_DATA_TRANSPORTER.getData().getResults().getEmail()
+            );
 
-        //set email & get from cache
-        partnerPhone.setText(
-                new PreferenceManager(this).retrievePartnerPhone()
-        );
+            //set email & get from cache
+            partnerPhone.setText(
+                    DataHelper.USER_DATA_TRANSPORTER.getData().getResults().getPhoneNumber()
+            );
+        }
     }
 
     @Override

@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableRow;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.itridtechnologies.codenamefive.R;
+import com.itridtechnologies.codenamefive.utils.DataHelper;
 
 public class PartnerAppMenu extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,7 +29,12 @@ public class PartnerAppMenu extends AppCompatActivity implements View.OnClickLis
     private Button logoutPartner;
     private ImageView autoAcceptOn;
     private ImageView autoAcceptOff;
+    private ImageView mImageViewPartnerPic;
     private boolean isOn = true;
+    //..
+    private TextView mTextViewPartnerName;
+    private String profileImgUrl;
+    private String partnerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,8 @@ public class PartnerAppMenu extends AppCompatActivity implements View.OnClickLis
         logoutPartner = findViewById(R.id.btn_logout_partner);
         autoAcceptOn = findViewById(R.id.toggle_on);
         autoAcceptOff = findViewById(R.id.toggle_off);
+        mTextViewPartnerName = findViewById(R.id.partner_name);
+        mImageViewPartnerPic = findViewById(R.id.user_pic);
 
         //setListeners
         rowPartnerProfile.setOnClickListener(this);
@@ -62,6 +72,38 @@ public class PartnerAppMenu extends AppCompatActivity implements View.OnClickLis
         logoutPartner.setOnClickListener(this);
 
     }//onCreate
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //assign data
+        if (DataHelper.USER_DATA_TRANSPORTER != null) {
+            partnerName =
+                    DataHelper.USER_DATA_TRANSPORTER.getData().getResults().getFirstName().toUpperCase()
+                            + " " +
+                            DataHelper.USER_DATA_TRANSPORTER.getData().getResults().getLastName().toUpperCase();
+
+            profileImgUrl = DataHelper.PARTNER_PROFILE_IMG;
+        }
+    }//onStart
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        UpdateUI();
+    }
+
+    private void UpdateUI() {
+        mTextViewPartnerName.setText(partnerName);
+        //load img
+        Glide
+                .with(this)
+                .load(profileImgUrl)
+                .centerCrop()
+                .placeholder(R.drawable.img_place_holder)
+                .into(mImageViewPartnerPic);
+    }//end fun
 
     @Override
     public void onClick(View v) {
@@ -117,7 +159,7 @@ public class PartnerAppMenu extends AppCompatActivity implements View.OnClickLis
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
 
-                //merged cases
+            //merged cases
             case R.id.tr_pt_inbox:
             case R.id.btn_partnerInbox:
                 Intent intent4 = new Intent(this, PartnerInbox.class);
@@ -126,7 +168,7 @@ public class PartnerAppMenu extends AppCompatActivity implements View.OnClickLis
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
             case R.id.btn_logout_partner:
-                Intent intent5 = new Intent(this , PartnerLogin.class);
+                Intent intent5 = new Intent(this, PartnerLogin.class);
                 startActivity(intent5);
 
         }//end switch

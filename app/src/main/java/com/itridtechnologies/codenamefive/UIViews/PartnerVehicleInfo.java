@@ -12,8 +12,10 @@ import android.widget.Toast;
 
 import com.itridtechnologies.codenamefive.Models.PartnerVehicleModel.PartnerVehicle;
 import com.itridtechnologies.codenamefive.Models.PartnerVehicleModel.PartnerVehicleResponse;
+import com.itridtechnologies.codenamefive.NetworkManager.RestApiManager;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.utils.DataHelper;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -39,7 +41,6 @@ public class PartnerVehicleInfo extends AppCompatActivity {
     private ProgressBar mBar;
 
     //vars
-    private PartnerRegistrationApi mRegistrationApi;
     private String vehicleType;
     private String vehicleNumber;
     private ArrayList<PartnerVehicle> mPartnerVehicles;
@@ -55,13 +56,6 @@ public class PartnerVehicleInfo extends AppCompatActivity {
         mImageViewBack = findViewById(R.id.img_back);
         mBar = findViewById(R.id.progressBar);
 
-        //init retrofit
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        mRegistrationApi = retrofit.create(PartnerRegistrationApi.class);
-
     }//onCreate
 
     @Override
@@ -76,7 +70,10 @@ public class PartnerVehicleInfo extends AppCompatActivity {
         Log.d(TAG, "fetchVehicleData: fetching data...");
         mBar.setVisibility(View.VISIBLE);
 
-        Call<PartnerVehicleResponse> call = mRegistrationApi.getVehicleInformation(getAuthToken());
+        Call<PartnerVehicleResponse> call = RestApiManager.getRestApiService().getVehicleInformation
+                (
+                        DataHelper.AUTH_TOKEN
+                );
 
         call.enqueue(new Callback<PartnerVehicleResponse>() {
             @Override
@@ -85,6 +82,7 @@ public class PartnerVehicleInfo extends AppCompatActivity {
                     if (response.code() == 200 && response.body() != null) {
 
                         Log.d(TAG, "onResponse: success: " + response.body().isSuccess());
+                        mBar.setVisibility(View.GONE);
 
                         //get values from data[] array we received in body
                         mPartnerVehicles = response.body().getVehicleList();
@@ -103,18 +101,17 @@ public class PartnerVehicleInfo extends AppCompatActivity {
                     }//success
                     else if (response.code() == 400) {
                         Toast.makeText(PartnerVehicleInfo.this, "Access Denied !", Toast.LENGTH_SHORT).show();
+                        mBar.setVisibility(View.GONE);
                     }
                 }
             }//response
 
             @Override
             public void onFailure(@NotNull Call<PartnerVehicleResponse> call, @NotNull Throwable t) {
+                mBar.setVisibility(View.GONE);
                 Log.d(TAG, "onFailure: " + t.getMessage());
             }
         });
     }//end api
 
-    private String getAuthToken() {
-        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdF9uYW1lIjoiaW1ybmEiLCJsYXN0X25hbWUiOiJyYXNoZWVkIiwiZW1haWwiOiJpbXJhbnJhc2hlZWQuZGV2ZWxvcGVyQG91dGxvb2suY28iLCJpZCI6MTA0LCJwcm9maWxlX3Bob3RvIjoicHVibGljL3VwbG9hZHMvcGFydG5lci85MTllMDlmYmMwYzRhODczMGM4MjVlYjUzODEzZjk3ZS5qcGciLCJwaG9uZV9udW1iZXIiOiIwMzA2NDQ2OTc5OSIsInN0YXR1cyI6InBlbmRpbmciLCJvbmxpbmVfc3RhdHVzIjowLCJpYXQiOjE2MDIyNDE3OTN9.P7ZztlTapq1t7CapraMECMUeqWji3TV1LDRqMT5AJ3Y";
-    }
 }//endClass

@@ -15,7 +15,7 @@ import com.google.gson.JsonObject;
 import com.itridtechnologies.codenamefive.Const.Constants;
 import com.itridtechnologies.codenamefive.Models.UpdateInfoResponse;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 
 import java.util.ArrayList;
 

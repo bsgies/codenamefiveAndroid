@@ -404,6 +404,7 @@ public class PartnerDashboardMain extends AppCompatActivity implements OnMapRead
                         //show the recenter button
                         recenterGps.setVisibility(View.VISIBLE);
                         relativeLayoutGps.setVisibility(View.VISIBLE);
+                        
                     }
                 }//end camera moved
             });

@@ -38,7 +38,7 @@ dependencies {
     //recyclerView
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     //materialDesign
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //google play services
     implementation 'com.google.android.gms:play-services:12.0.1'
@@ -56,13 +56,19 @@ dependencies {
     //circular img view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     //GSON(json to java object converter)
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //country spinner ccp
     implementation 'com.hbb20:ccp:2.4.0'
     //auto phone num formatter
     implementation 'com.hbb20:ccp:X.Y.Z'
+    //okHttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.5.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

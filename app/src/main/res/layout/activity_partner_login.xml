@@ -63,7 +63,6 @@
                 style="@style/TextEsmallBlack"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:background="@drawable/txt_input_lay_background"
                 android:inputType="text"
                 android:padding="8dp">
 

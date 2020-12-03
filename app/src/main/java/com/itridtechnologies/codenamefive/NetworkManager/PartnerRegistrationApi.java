@@ -1,4 +1,4 @@
-package com.itridtechnologies.codenamefive.RetrofitInterfaces;
+package com.itridtechnologies.codenamefive.NetworkManager;
 
 import com.google.gson.JsonObject;
 import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayDataResponse;

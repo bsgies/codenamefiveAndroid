@@ -9,9 +9,7 @@ import androidx.core.content.FileProvider;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.Manifest;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
@@ -40,10 +38,11 @@ import com.google.gson.JsonObject;
 import com.hbb20.CountryCodePicker;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.EmailPassExistResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.FirstRegisterStep;
+import com.itridtechnologies.codenamefive.NetworkManager.RestApiManager;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 import com.itridtechnologies.codenamefive.UIViews.Fragments.FragBottomDialog;
-import com.itridtechnologies.codenamefive.UIViews.Fragments.FragNoInternetDialog;
+import com.itridtechnologies.codenamefive.utils.ApplicationManager;
 import com.itridtechnologies.codenamefive.utils.UniversalDialog;
 import com.santalu.maskara.widget.MaskEditText;
 
@@ -83,8 +82,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
     //pattern password
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$");
-    private static String vehicleNum = "";
-    PartnerRegistrationApi mAPI;
+    private static final String vehicleNum = "";
     Animation fadeIn;
     //ui views
     private Spinner mVehicleTypeSpinner;
@@ -148,13 +146,6 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
         mChangePhotoRow.setOnClickListener(this);
         mUserPhoto.setOnClickListener(this);
         mButtonContinueRegistration.setOnClickListener(this);
-
-        //init & build retrofit
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        mAPI = retrofit.create(PartnerRegistrationApi.class);
 
         //set up spinner
         setUpSpinner();
@@ -291,7 +282,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == PICK_IMAGE_REQUEST) {
-            if (resultCode == RESULT_OK ) {
+            if (resultCode == RESULT_OK) {
 
                 //hide upload pho row
                 mUploadPhotoRow.setVisibility(View.GONE);
@@ -413,7 +404,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
 
         if (inputValidation()) {
             //check for internet
-            if (isNetworkOk()) {
+            if (ApplicationManager.isNetworkOk()) {
                 showButtonLoading();
                 //if input is valid (means not null or unformatted)
                 //call API for email / phone validation
@@ -613,7 +604,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
         emailParams.addProperty("value", email);
 
         //pass raw json to api
-        Call<EmailPassExistResponse> call = mAPI.isExistingEmail(emailParams);
+        Call<EmailPassExistResponse> call = RestApiManager.getRestApiService().isExistingEmail(emailParams);
 
         //execute call
         call.enqueue(new Callback<EmailPassExistResponse>() {
@@ -668,7 +659,7 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
         phoneParams.addProperty("value", phone);
 
         //pass raw json to api
-        Call<EmailPassExistResponse> call = mAPI.isExistingPhone(phoneParams);
+        Call<EmailPassExistResponse> call = RestApiManager.getRestApiService().isExistingPhone(phoneParams);
 
         //execute call
         call.enqueue(new Callback<EmailPassExistResponse>() {
@@ -735,20 +726,6 @@ public class RegisterFirstStep extends AppCompatActivity implements AdapterView.
             galleryAddPic();
         }
     }
-
-    public boolean isNetworkOk() {
-        boolean connected = false;
-        try {
-            ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo nInfo = cm.getActiveNetworkInfo();
-            connected = nInfo != null && nInfo.isAvailable() && nInfo.isConnected();
-            Log.d(TAG, "isNetworkOk: " + connected);
-
-        } catch (Exception e) {
-            Log.e("Connectivity Exception", Objects.requireNonNull(e.getMessage()));
-        }
-        return connected;
-    }//end method
 
     private void focusToBottom() {
         //load animation for error tv

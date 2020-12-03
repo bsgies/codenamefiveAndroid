@@ -11,14 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.itridtechnologies.codenamefive.Const.Constants;
 import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayData;
 import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayDataResponse;
 import com.itridtechnologies.codenamefive.Models.PartnerPayment.GatewayResponse;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 
 import org.jetbrains.annotations.NotNull;
 

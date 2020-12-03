@@ -1,6 +1,5 @@
 package com.itridtechnologies.codenamefive.UIViews;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -22,7 +21,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -36,9 +34,9 @@ import com.itridtechnologies.codenamefive.Models.RegistrationModels.CountryRespo
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.SecondRegisterStep;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.States;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.StatesResponse;
+import com.itridtechnologies.codenamefive.NetworkManager.RestApiManager;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
-import com.itridtechnologies.codenamefive.UIViews.Fragments.FragBottomDialog;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 import com.itridtechnologies.codenamefive.utils.UniversalDialog;
 
 import org.jetbrains.annotations.NotNull;
@@ -59,7 +57,7 @@ public class RegisterSecondStep extends AppCompatActivity implements View.OnClic
     //constants
     private static final String TAG = "RegisterSecondStep";
     //vars
-    PartnerRegistrationApi mPartnerRegistrationApi;
+
     Animation fadeIn;
     //ui views
     private EditText mEditTextBirthDate;
@@ -324,12 +322,6 @@ public class RegisterSecondStep extends AppCompatActivity implements View.OnClic
 
     private void makeNetworkRequests() {
         Log.d(TAG, "makeNetworkRequests: making request...");
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        mPartnerRegistrationApi = retrofit.create(PartnerRegistrationApi.class);
 
         //get list of countries
         getCountries();
@@ -339,7 +331,7 @@ public class RegisterSecondStep extends AppCompatActivity implements View.OnClic
 
     private void getCountries() {
 
-        Call<CountryResponse> call = mPartnerRegistrationApi.getAllCountries();
+        Call<CountryResponse> call = RestApiManager.getRestApiService().getAllCountries();
         mProgressBar.setVisibility(View.VISIBLE);
 
         call.enqueue(new Callback<CountryResponse>() {
@@ -387,7 +379,7 @@ public class RegisterSecondStep extends AppCompatActivity implements View.OnClic
         Log.d(TAG, "getState: getting states...");
         mProgressBar.setVisibility(View.VISIBLE);
 
-        Call<StatesResponse> call = mPartnerRegistrationApi.getAllStates(id);
+        Call<StatesResponse> call = RestApiManager.getRestApiService().getAllStates(id);
 
         call.enqueue(new Callback<StatesResponse>() {
             @Override
@@ -434,7 +426,7 @@ public class RegisterSecondStep extends AppCompatActivity implements View.OnClic
         Log.d(TAG, "getCities: getting cities...");
         mProgressBar.setVisibility(View.VISIBLE);
 
-        Call<CityResponse> call = mPartnerRegistrationApi.getAllCities(id);
+        Call<CityResponse> call = RestApiManager.getRestApiService().getAllCities(id);
 
         call.enqueue(new Callback<CityResponse>() {
             @Override

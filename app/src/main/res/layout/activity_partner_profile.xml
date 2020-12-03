@@ -76,9 +76,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@id/img_profile_photo"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Bilal Khan"
+                    tools:text="Bilal Khan"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -88,31 +88,30 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/profile_pt_name"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
+                    android:padding="2dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="sgies_@Hotmail.co.uk"
+                    tools:text="sgies_@Hotmail.co.uk"
                     android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/profile_pt_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="2dp"
                     android:layout_below="@+id/profile_pt_email"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="00921837465757"
+                    tools:text="00921837465757"
                     android:textSize="15sp" />
 
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile_photo"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/user_face" />
+                    android:src="@drawable/img_place_holder" />
 
             </RelativeLayout>
         </TableRow>

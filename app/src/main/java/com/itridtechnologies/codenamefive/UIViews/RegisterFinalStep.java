@@ -1,7 +1,6 @@
 package com.itridtechnologies.codenamefive.UIViews;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.FileProvider;
@@ -41,9 +40,11 @@ import com.itridtechnologies.codenamefive.Models.RegistrationModels.DocumentMode
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.EmailPassExistResponse;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.FirstRegisterStep;
 import com.itridtechnologies.codenamefive.Models.RegistrationModels.SecondRegisterStep;
+import com.itridtechnologies.codenamefive.NetworkManager.RestApiManager;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 import com.itridtechnologies.codenamefive.UIViews.Fragments.FragBottomDialog;
+import com.itridtechnologies.codenamefive.utils.ApplicationManager;
 import com.itridtechnologies.codenamefive.utils.UniversalDialog;
 
 import org.jetbrains.annotations.NotNull;
@@ -84,7 +85,6 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
     MultipartBody.Part file2Parts;
     MultipartBody.Part file3Parts;
     MultipartBody.Part file4Parts;
-    PartnerRegistrationApi mRegistrationApi;
     MediaPlayer player;
     Animation fadeIn;
     //ui views
@@ -103,6 +103,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
     private CardView uploadProgressView;
     private ProgressBar mProgressBar;
     private TextView mTextViewProgress;
+
     //vars
     private Uri mFrontDocUri;
     private Uri mBackDocUri;
@@ -201,9 +202,8 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
                     if (prepareFileParts()) {
 
                         //files are good, but check for internet to start upload
-                        if (isNetworkOk()) {
+                        if (ApplicationManager.isNetworkOk()) {
                             //final go...
-                            buildRetrofit();
                             uploadDocument1();
                         } else {
                             //no internet
@@ -713,17 +713,9 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
         }
     }//file parts
 
-    private void buildRetrofit() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        mRegistrationApi = retrofit.create(PartnerRegistrationApi.class);
-    }
-
     private void uploadDocument1() {
         Log.d(TAG, "uploadDocument1: uploading front document...");
-        Call<PojoImageResponse> call = mRegistrationApi.uploadDocument1(file1Parts);
+        Call<PojoImageResponse> call = RestApiManager.getRestApiService().uploadDocument1(file1Parts);
 
         call.enqueue(new Callback<PojoImageResponse>() {
             @Override
@@ -764,7 +756,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
 
     private void uploadDocument2() {
         Log.d(TAG, "uploadDocument2: uploading back document...");
-        Call<PojoImageResponse> call = mRegistrationApi.uploadDocument2(file2Parts);
+        Call<PojoImageResponse> call = RestApiManager.getRestApiService().uploadDocument2(file2Parts);
 
         call.enqueue(new Callback<PojoImageResponse>() {
             @Override
@@ -801,7 +793,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
 
     private void uploadDocument3() {
         Log.d(TAG, "uploadDocument3: uploading address document...");
-        Call<PojoImageResponse> call = mRegistrationApi.uploadDocument3(file3Parts);
+        Call<PojoImageResponse> call = RestApiManager.getRestApiService().uploadDocument3(file3Parts);
 
         call.enqueue(new Callback<PojoImageResponse>() {
             @Override
@@ -839,7 +831,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
 
     private void uploadDocument4() {
         Log.d(TAG, "uploadDocument4: uploading profile document...");
-        Call<PojoImageResponse> call = mRegistrationApi.uploadProfilePhoto(file4Parts);
+        Call<PojoImageResponse> call = RestApiManager.getRestApiService().uploadProfilePhoto(file4Parts);
 
         call.enqueue(new Callback<PojoImageResponse>() {
             @Override
@@ -879,7 +871,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
     private void completePartnerRegistration(JsonObject object) {
         Log.d(TAG, "completePartnerRegistration: uploading data...");
 
-        Call<EmailPassExistResponse> call = mRegistrationApi.registerPartner(object);
+        Call<EmailPassExistResponse> call = RestApiManager.getRestApiService().registerPartner(object);
 
         call.enqueue(new Callback<EmailPassExistResponse>() {
             @Override
@@ -982,7 +974,7 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
             } else if (code == 2) {
                 //server unreachable (clear text communication not possible)
-                if (!isNetworkOk()) {
+                if (!ApplicationManager.isNetworkOk()) {
                     showInternetErrorDialog();
                 } else {
                     uploadDocument1();
@@ -1000,20 +992,6 @@ public class RegisterFinalStep extends AppCompatActivity implements View.OnClick
         startActivity(new Intent(this, PartnerLogin.class));
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
-
-    public boolean isNetworkOk() {
-        boolean connected = false;
-        try {
-            ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo nInfo = cm.getActiveNetworkInfo();
-            connected = nInfo != null && nInfo.isAvailable() && nInfo.isConnected();
-            Log.d(TAG, "isNetworkOk: " + connected);
-
-        } catch (Exception e) {
-            Log.e("Connectivity Exception", Objects.requireNonNull(e.getMessage()));
-        }
-        return connected;
-    }//end method
 
     private void createVibeAlertWithSound() {
         Log.d(TAG, "createVibeAlertWithSound: trying to give haptic feedback...");

@@ -17,7 +17,7 @@ import com.google.gson.JsonObject;
 import com.itridtechnologies.codenamefive.Models.Preferences.PreferenceManager;
 import com.itridtechnologies.codenamefive.Models.UpdateInfoResponse;
 import com.itridtechnologies.codenamefive.R;
-import com.itridtechnologies.codenamefive.RetrofitInterfaces.PartnerRegistrationApi;
+import com.itridtechnologies.codenamefive.NetworkManager.PartnerRegistrationApi;
 import com.itridtechnologies.codenamefive.UIViews.PartnerEditProfile;
 import com.itridtechnologies.codenamefive.UIViews.PartnerLogin;
 import com.itridtechnologies.codenamefive.utils.UniversalDialog;
